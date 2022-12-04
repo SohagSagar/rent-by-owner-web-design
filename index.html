@@ -36,7 +36,11 @@
        <div class="banner-content">
             <p>JOURNEYS</p>
             <p>Stories From Around The World</p>
-            <input type="text" placeholder="Search">
+
+            <div class="search-field">
+                <input type="text" placeholder="Search">
+                <!-- <img src="./assets/icons8-search-30.png" alt="" srcset=""> -->
+            </div>
        </div>
     </section>
 
@@ -158,33 +162,22 @@
 
             <h3>CATEGORY</h3>
             <!-- list of categories -->
-            <div>
-                <!-- single category -->
-                <div class="category">
-                    <h4>Florida</h4>
-                    <img src="./assets/plus.png"/>
-                </div>
+               
+                <ul class="categories-list">
+                     <!-- single category -->
+                    <li>
+                        <label for="cat-1" class="category"> 
+                            <h4>Alabama</h4>
+                             <img src="./assets/arrow.png"/> 
+                        </label>
+                        <input type="checkbox" name="category" id="cat-1">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, veniam.</p>
+                        </div>
+                    </li>
 
-                <div class="category">
-                    <h4>Florida</h4>
-                    <img src="./assets/plus.png"/>
-                </div>
-
-                <div class="category">
-                    <h4>Florida</h4>
-                    <img src="./assets/plus.png"/>
-                </div>
-
-                <div class="category">
-                    <h4>Florida</h4>
-                    <img src="./assets/plus.png"/>
-                </div>
-
-                <div class="category">
-                    <h4>Florida</h4>
-                    <img src="./assets/plus.png"/>
-                </div>
-            </div>
+                    
+                </ul>
             
         </section>
     </section>

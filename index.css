@@ -103,6 +103,7 @@ body{
     border-radius: 5px;
     margin-top: 5px;
     
+    
 }
 
 .banner-content{
@@ -111,7 +112,9 @@ body{
     justify-content: center;
     align-items: center;
     padding-top: 80px;
+   
 }
+
 
 p:nth-child(1){
     color: var(--menu-font-color);
@@ -127,15 +130,31 @@ p:nth-child(2){
     font-family: var(--font)
 }
 
-.banner-content> input{
+.search-field {
+    
+}
+
+
+/* .search-field input{
+    position: absolute;
+}
+
+.search-field img{
+    position: relative;
+    width: 20px;
+    top: 10px;
+    left: 5px;
+}  */
+
+.search-field input{
     width: 25vw;
     height: 35px;
     border-radius: 5px;
     border: none;
-    padding-left: 10px;
+    padding-left: 30px;
 }
 
-.banner-content> input:focus{
+.search-field input:focus{
     outline: none;
 }
 
@@ -196,8 +215,8 @@ p:nth-child(2){
 }
 
 .pagination-container :nth-child(1){
-    height: 50px;
-    width: 50px;
+    padding: 10px;
+    min-width: 15px;
     color: white;
     background-color: var(--primary-color);
     display: flex;
@@ -205,14 +224,23 @@ p:nth-child(2){
     align-items: center;
     
 }
+
 .pagination-container>div{
     font-weight: bold;
     color: var(--primary-color);
+    border: 1px solid rgb(236, 236, 236);
+    padding: 10px;
+    min-width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
 }
 
 .pagination-container{
     display: flex;
-    column-gap: 30px;
+    column-gap: 15px;
     align-items: center;
 }
 
@@ -226,6 +254,52 @@ p:nth-child(2){
 .categories h3{
     color: var(--light-color);
     font-family: var(--font);
+}
+
+.categories-list li{
+    list-style: none;
+}
+.categories-list {
+    padding-left: 0px;
+}
+
+.categories-list label + input[type='checkbox']{
+    display: none;
+}
+
+.categories-list .content {
+    max-height: 0;
+    transition: max-height 0.5s;
+    overflow: hidden;
+} 
+.category img{
+    cursor: pointer;
+    rotate: -90deg;
+}
+
+.category img :hover{
+    cursor: pointer;
+    rotate: 90deg;
+}
+
+.categories-list label + input[type='checkbox']:checked + .content{
+    max-height: fit-content;
+    transition: all 0.9s;
+}
+
+.categories-list label + input[type='checkbox']:checked + .category img{
+    
+    rotate: 180deg;
+}
+
+
+
+
+.content p{
+    color: var(--light-color);
+    font-family: var(--font);
+    font-size: 14px;
+    text-align: justify;
 }
 .category{
     display: flex;
